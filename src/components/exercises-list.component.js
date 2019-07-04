@@ -51,8 +51,8 @@ export default class ExercisesList extends Component {
   render() {
     return (
       <div>
-        <h3>Logged Exercises</h3>
-        <table className="table">
+        <h3 style={{fontWeight:'bold', marginBottom:20}}>Logged Exercises</h3>
+        <table className="table" style={{borderColor: '#69707e',borderStyle: 'outset'}}>
           <thead className="thead-light">
             <tr>
               <th>Username</th>

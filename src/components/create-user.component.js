@@ -39,7 +39,8 @@ export default class CreateUser extends Component {
   render() {
     return (
       <div>
-        <h3>Create New User</h3>
+        <h3 style={{fontWeight:'bold', marginBottom:20}}>Create New User</h3>
+        <div style={{borderColor: '#69707e',borderStyle: 'outset', padding:10}}>
         <form onSubmit={this.onSubmit}>
           <div className="form-group"> 
             <label>Username: </label>
@@ -54,6 +55,7 @@ export default class CreateUser extends Component {
             <input type="submit" value="Create User" className="btn btn-primary" />
           </div>
         </form>
+        </div>
       </div>
     )
   }

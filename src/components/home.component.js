@@ -3,7 +3,7 @@ import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 
-export default class EditExercise extends Component {
+export default class Home extends Component {
   constructor(props) {
     super(props);
 
@@ -94,60 +94,14 @@ export default class EditExercise extends Component {
 
   render() {
     return (
-    <div >
-      <h3 style={{fontWeight:'bold', marginBottom:20}}>Edit Exercise Log</h3>
-      <div style={{borderColor: '#69707e',borderStyle: 'outset', padding:10}}>
-      <form onSubmit={this.onSubmit} >
-        <div className="form-group"> 
-          <label>Username: </label>
-          <select ref="userInput"
-              required
-              className="form-control"
-              value={this.state.username}
-              onChange={this.onChangeUsername}>
-              {
-                this.state.users.map(function(user) {
-                  return <option 
-                    key={user}
-                    value={user}>{user}
-                    </option>;
-                })
-              }
-          </select>
-        </div>
-        <div className="form-group"> 
-          <label>Description: </label>
-          <input  type="text"
-              required
-              className="form-control"
-              value={this.state.description}
-              onChange={this.onChangeDescription}
-              />
-        </div>
-        <div className="form-group">
-          <label>Duration (in minutes): </label>
-          <input 
-              type="text" 
-              className="form-control"
-              value={this.state.duration}
-              onChange={this.onChangeDuration}
-              />
-        </div>
-        <div className="form-group">
-          <label>Date: </label>
-          <div>
-            <DatePicker
-              selected={this.state.date}
-              onChange={this.onChangeDate}
-            />
-          </div>
-        </div>
+    <div style={{textAlign: "center"}}>
+      <img alt="trackerr" src="https://i.ibb.co/VLKsW7Z/trackerr-logo.png" style={{height:300,width:300}}></img>
+      <p style={{fontFamily:'InterUI,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
+         color:'#59626b !important', fontSize:40,fontWeight:400}}>
+          Trackerr can help you to keep track of your exercises.<br />
 
-        <div className="form-group">
-          <input type="submit" value="Edit Exercise Log" className="btn btn-primary" />
-        </div>
-      </form>
-      </div>
+          Go to <a href="/user"> Create user</a> to get started. <br/>
+      </p>
     </div>
     )
   }

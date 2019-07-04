@@ -31,3 +31,10 @@
     transform: rotate(360deg);
   }
 }
+
+.navmenu { margin: 0 auto }
+.navlink { display: flex; justify-content: center }
+
+.container{
+  font-family: Arial,Helvetica,Sans,Sans-Serif,Sans Serif;
+}
